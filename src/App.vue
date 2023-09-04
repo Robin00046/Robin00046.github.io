@@ -27,8 +27,8 @@
 </template>
 
 <script setup>
-import NavigatonHead from "./components/NavigatonHead.vue";
-import Footer from "./components/Footer.vue";
+import NavigatonHead from './components/NavigatonHead.vue';
+import Footer from './components/Footer.vue';
 </script>
 <style>
 .slide-fade-enter-active {

@@ -1,9 +1,6 @@
 <template>
-  <header class="bg-cyan-600">
-    <nav
-      class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
-      aria-label="Global"
-    >
+  <header class="bg-cyan-700">
+    <nav class="mx-auto flex max-w-7xl p-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
         <!-- <router-link href="#" class="-m-1.5 p-1.5"> -->
         <span class="sr-only">Your Company</span>
@@ -24,16 +21,21 @@
           <Bars3Icon class="h-6 w-6" aria-hidden="true" />
         </button>
       </div>
-      <div class="hidden lg:flex lg:gap-x-12">
+      <div class="hidden lg:flex lg:grow lg:gap-x-12">
         <router-link
           v-for="item in navigation"
           :key="item.name"
           :to="{ name: item.href }"
-          class="text-lg font-semibold leading-6 text-white"
+          :class="[
+            item.href === $route.name
+              ? 'bg-cyan-800 text-white'
+              : 'text-cyan-100 hover:bg-cyan-600 hover:text-white ',
+            'text-lg font-semibold leading-6 text-cyan-100 p-2 rounded-lg',
+          ]"
           >{{ item.name }}</router-link
         >
       </div>
-      <div class="hidden lg:flex lg:flex-1 lg:justify-end"></div>
+      <!-- <div class="hidden lg:flex lg:flex-1 lg:justify-end"></div> -->
     </nav>
     <Dialog
       as="div"
@@ -83,16 +85,16 @@
 </template>
 
 <script setup>
-import { RouterLink } from "vue-router";
-import { ref } from "vue";
-import { Dialog, DialogPanel } from "@headlessui/vue";
-import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
+import { RouterLink } from 'vue-router';
+import { ref } from 'vue';
+import { Dialog, DialogPanel } from '@headlessui/vue';
+import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
 
 const navigation = [
-  { name: "Home", href: "home" },
-  { name: "Project", href: "project" },
-  { name: "Contact", href: "contact" },
-  { name: "About", href: "about" },
+  { name: 'Home', href: 'home' },
+  { name: 'Project', href: 'project' },
+  { name: 'Contact', href: 'contact' },
+  { name: 'About', href: 'about' },
 ];
 
 const mobileMenuOpen = ref(false);
