@@ -1,27 +1,35 @@
 <template>
-  <header class="bg-cyan-700">
-    <nav class="mx-auto flex max-w-7xl p-6 lg:px-8" aria-label="Global">
+  <header
+    class="bg-cyan-700 dark:bg-slate-900 dark:border-b dark:border-slate-500"
+  >
+    <nav
+      class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+      aria-label="Global"
+    >
       <div class="flex lg:flex-1">
-        <!-- <router-link href="#" class="-m-1.5 p-1.5"> -->
-        <span class="sr-only">Your Company</span>
-        <img
-          class="h-8 w-auto"
-          src="https://tailwindui.com/img/logos/mark.svg?color=white"
-          alt=""
-        />
-        <!-- </router-link> -->
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">Your Company</span>
+          <img
+            class="h-8 w-auto"
+            src="https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=600"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="flex lg:hidden">
+        <ToogleDarkmode />
       </div>
       <div class="flex lg:hidden">
         <button
           type="button"
-          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-indigo-300"
+          class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-cyan-100"
           @click="mobileMenuOpen = true"
         >
           <span class="sr-only">Open main menu</span>
           <Bars3Icon class="h-6 w-6" aria-hidden="true" />
         </button>
       </div>
-      <div class="hidden lg:flex lg:grow lg:gap-x-12">
+      <div class="hidden lg:flex lg:gap-x-12">
         <router-link
           v-for="item in navigation"
           :key="item.name"
@@ -35,7 +43,9 @@
           >{{ item.name }}</router-link
         >
       </div>
-      <!-- <div class="hidden lg:flex lg:flex-1 lg:justify-end"></div> -->
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <ToogleDarkmode />
+      </div>
     </nav>
     <Dialog
       as="div"
@@ -45,20 +55,20 @@
     >
       <div class="fixed inset-0 z-10" />
       <DialogPanel
-        class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+        class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-cyan-700 dark:bg-slate-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
       >
         <div class="flex items-center justify-between">
-          <router-link href="#" class="-m-1.5 p-1.5">
+          <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Your Company</span>
             <img
               class="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              src="https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=600"
               alt=""
             />
-          </router-link>
+          </a>
           <button
             type="button"
-            class="-m-2.5 rounded-md p-2.5 text-gray-700"
+            class="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-cyan-100"
             @click="mobileMenuOpen = false"
           >
             <span class="sr-only">Close menu</span>
@@ -72,11 +82,11 @@
                 v-for="item in navigation"
                 :key="item.name"
                 :to="{ name: item.href }"
-                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-cyan-100 hover:bg-gray-50"
+                @click="mobileMenuOpen = false"
                 >{{ item.name }}</router-link
               >
             </div>
-            <div class="py-6"></div>
           </div>
         </div>
       </DialogPanel>
@@ -85,16 +95,17 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router';
-import { ref } from 'vue';
-import { Dialog, DialogPanel } from '@headlessui/vue';
-import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
+import { RouterLink } from "vue-router";
+import ToogleDarkmode from "./ToogleDarkmode.vue";
+import { ref } from "vue";
+import { Dialog, DialogPanel } from "@headlessui/vue";
+import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 
 const navigation = [
-  { name: 'Home', href: 'home' },
-  { name: 'Project', href: 'project' },
-  { name: 'Contact', href: 'contact' },
-  { name: 'About', href: 'about' },
+  { name: "Home", href: "home" },
+  { name: "Project", href: "project" },
+  { name: "Contact", href: "contact" },
+  { name: "About", href: "about" },
 ];
 
 const mobileMenuOpen = ref(false);
