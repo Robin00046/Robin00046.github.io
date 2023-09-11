@@ -8,10 +8,10 @@
       <div
         class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8"
       >
-        <a
+        <RouterLink
           v-for="product in products.slice(0, 3)"
           :key="product.id"
-          :href="product.href + '/' + product.id"
+          :to="'/' + product.href + '/' + product.id"
           class="group"
         >
           <div
@@ -28,12 +28,13 @@
               {{ product.name }}
             </h3>
           </div>
-        </a>
+        </RouterLink>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import products from "../data/product.js";
+import products from '../data/product.js';
+import { RouterLink } from 'vue-router';
 </script>

@@ -11,7 +11,7 @@
         <RouterLink
           v-for="product in products"
           :key="product.id"
-          :href="product.href + '/' + product.id"
+          :to="'/' + product.href + '/' + product.id"
           class="group"
         >
           <div
