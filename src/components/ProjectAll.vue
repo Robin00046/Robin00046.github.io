@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-white">
+  <div
+    class="bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-500"
+  >
     <div
       class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"
     >
@@ -15,7 +17,7 @@
           class="group"
         >
           <div
-            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7"
+            class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-50 dark:bg-slate-900 xl:aspect-h-8 xl:aspect-w-7"
           >
             <img
               :src="product.images[0].src"
@@ -24,7 +26,9 @@
             />
           </div>
           <div class="flex justify-center">
-            <h3 class="mt-4 text-base sm:text-lg font-bold text-gray-700">
+            <h3
+              class="mt-4 text-base sm:text-lg font-bold text-gray-700 dark:text-slate-50"
+            >
               {{ product.name }}
             </h3>
           </div>

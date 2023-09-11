@@ -3,7 +3,7 @@
     <banner />
     <project class="mt-2" />
     <div
-      class="flex flex-col items-center justify-center bg-white"
+      class="flex flex-col items-center justify-center border-x border-gray-200 dark:border-slate-500"
       v-if="product.length > 3"
     >
       <a
@@ -19,10 +19,10 @@
   </div>
 </template>
 <script setup>
-import Banner from "../components/Banner.vue";
-import FolowMe from "../components/FolowMe.vue";
-import Project from "../components/Project.vue";
-import Skill from "../components/Skill.vue";
-import product from "../data/product";
+import Banner from '../components/Banner.vue';
+import FolowMe from '../components/FolowMe.vue';
+import Project from '../components/Project.vue';
+import Skill from '../components/Skill.vue';
+import product from '../data/product';
 </script>
 <style scoped></style>

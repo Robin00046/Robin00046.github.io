@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-col bg-white shadow-sm py-9 max-w-xl mx-auto space-y-3">
+  <div
+    class="flex flex-col bg-gray-50 dark:bg-slate-900 shadow-sm py-9 max-w-xl mx-auto space-y-3"
+  >
     <div class="flex justify-center px-5">
       <textarea
         v-model="test"
@@ -23,14 +25,14 @@
   </div>
 </template>
 <script setup>
-import { ref } from "vue";
-const baseurl = ref("");
-const test = ref("");
-const message = ref("");
+import { ref } from 'vue';
+const baseurl = ref('');
+const test = ref('');
+const message = ref('');
 
 const onChange = () => {
-  message.value = test.value.replace(/\s/g, "+");
-  baseurl.value = "https://wa.me/62895376633939?text=" + message.value;
+  message.value = test.value.replace(/\s/g, '+');
+  baseurl.value = 'https://wa.me/62895376633939?text=' + message.value;
   console.log(baseurl);
 };
 </script>

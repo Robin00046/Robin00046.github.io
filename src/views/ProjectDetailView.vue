@@ -14,7 +14,7 @@
   ```
 -->
 <template>
-  <div class="bg-white">
+  <div class="bg-gray-50 dark:bg-slate-900">
     <div
       class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"
     >
@@ -64,7 +64,9 @@
 
         <!-- detail[0] info -->
         <div class="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
-          <h1 class="text-3xl font-bold tracking-tight text-gray-900">
+          <h1
+            class="text-3xl font-bold tracking-tight text-ternary-dark dark:text-primary-light"
+          >
             {{ detail[0].name }}
           </h1>
 
@@ -72,7 +74,7 @@
             <h3 class="sr-only">Description</h3>
 
             <div
-              class="space-y-6 text-base text-gray-700"
+              class="space-y-6 text-base text-ternary-dark dark:text-primary-light"
               v-html="detail[0].description"
             />
           </div>
@@ -83,9 +85,9 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { useRoute } from "vue-router";
-import product from "../data/product.js";
+import { ref } from 'vue';
+import { useRoute } from 'vue-router';
+import product from '../data/product.js';
 import {
   Disclosure,
   DisclosureButton,
@@ -98,9 +100,9 @@ import {
   TabList,
   TabPanel,
   TabPanels,
-} from "@headlessui/vue";
-import { StarIcon } from "@heroicons/vue/20/solid";
-import { HeartIcon, MinusIcon, PlusIcon } from "@heroicons/vue/24/outline";
+} from '@headlessui/vue';
+import { StarIcon } from '@heroicons/vue/20/solid';
+import { HeartIcon, MinusIcon, PlusIcon } from '@heroicons/vue/24/outline';
 
 const route = useRoute();
 

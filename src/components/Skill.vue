@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-white">
+  <div
+    class="bg-gray-50 dark:bg-slate-900 border-b border-x border-gray-200 dark:border-slate-500"
+  >
     <div
       class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"
     >
@@ -24,7 +26,9 @@
           </div>
           <div class="mt-4 flex justify-center">
             <div>
-              <h3 class="text-lg font-semibold text-gray-700">
+              <h3
+                class="text-lg font-semibold text-gray-700 dark:text-slate-50"
+              >
                 {{ product.name }}
               </h3>
             </div>
@@ -36,38 +40,38 @@
 </template>
 
 <script setup>
-import logo from "../assets/codeigniter.svg";
+import logo from '../assets/codeigniter.svg';
 const products = [
   {
-    name: "PHP",
-    imageSrc: "https://www.vectorlogo.zone/logos/php/php-ar21.svg",
-    imageAlt: "PHP",
+    name: 'PHP',
+    imageSrc: 'https://www.vectorlogo.zone/logos/php/php-ar21.svg',
+    imageAlt: 'PHP',
   },
   {
-    name: "MYSQL",
-    imageSrc: "https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg",
-    imageAlt: "MYSQL",
+    name: 'MYSQL',
+    imageSrc: 'https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg',
+    imageAlt: 'MYSQL',
   },
   {
-    name: "Java Script",
+    name: 'Java Script',
     imageSrc:
-      "https://www.vectorlogo.zone/logos/javascript/javascript-ar21.svg",
-    imageAlt: "Java Script",
+      'https://www.vectorlogo.zone/logos/javascript/javascript-ar21.svg',
+    imageAlt: 'Java Script',
   },
   {
-    name: "Vue JS",
-    imageSrc: "https://www.vectorlogo.zone/logos/vuejs/vuejs-ar21.svg",
-    imageAlt: "Vue JS",
+    name: 'Vue JS',
+    imageSrc: 'https://www.vectorlogo.zone/logos/vuejs/vuejs-ar21.svg',
+    imageAlt: 'Vue JS',
   },
   {
-    name: "Laravel",
-    imageSrc: "https://www.vectorlogo.zone/logos/laravel/laravel-ar21.svg",
-    imageAlt: "Laravel Logo",
+    name: 'Laravel',
+    imageSrc: 'https://www.vectorlogo.zone/logos/laravel/laravel-ar21.svg',
+    imageAlt: 'Laravel Logo',
   },
   {
-    name: "CodeIgniter 3",
+    name: 'CodeIgniter 3',
     imageSrc: logo,
-    imageAlt: "CodeIgniter",
+    imageAlt: 'CodeIgniter',
   },
 ];
 </script>
