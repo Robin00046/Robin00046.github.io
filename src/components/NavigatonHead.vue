@@ -105,7 +105,7 @@ const navigation = [
   { name: "Home", href: "home" },
   { name: "Project", href: "project" },
   { name: "Contact", href: "contact" },
-  { name: "About", href: "about" },
+  // { name: "About", href: "about" },
 ];
 
 const mobileMenuOpen = ref(false);

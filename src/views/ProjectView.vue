@@ -1,3 +1,6 @@
 <template>
-  <h1>Project</h1>
+  <ProjectAll />
 </template>
+<script setup>
+import ProjectAll from "../components/ProjectAll.vue";
+</script>
