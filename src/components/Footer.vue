@@ -8,8 +8,8 @@
       <div
         class="border-t border-gray-100 dark:border-slate-500 py-10 text-center"
       >
-        <p class="text-sm text-gray-500">
-          &copy; 2021 Your Company, Inc. All rights reserved.
+        <p class="text-sm text-ternary-dark dark:text-primary-light">
+          &copy; 2023 Robin
         </p>
       </div>
     </div>

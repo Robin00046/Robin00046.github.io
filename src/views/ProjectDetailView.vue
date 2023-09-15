@@ -16,7 +16,7 @@
 <template>
   <div class="bg-gray-50 dark:bg-slate-900">
     <div
-      class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"
+      class="mx-auto max-w-2xl px-4 py-2 sm:px-6 sm:py-4 lg:max-w-7xl lg:px-8"
     >
       <div class="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
         <!-- Image gallery -->
@@ -85,9 +85,9 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { useRoute } from 'vue-router';
-import product from '../data/product.js';
+import { ref } from "vue";
+import { useRoute } from "vue-router";
+import product from "../data/product.js";
 import {
   Disclosure,
   DisclosureButton,
@@ -100,9 +100,9 @@ import {
   TabList,
   TabPanel,
   TabPanels,
-} from '@headlessui/vue';
-import { StarIcon } from '@heroicons/vue/20/solid';
-import { HeartIcon, MinusIcon, PlusIcon } from '@heroicons/vue/24/outline';
+} from "@headlessui/vue";
+import { StarIcon } from "@heroicons/vue/20/solid";
+import { HeartIcon, MinusIcon, PlusIcon } from "@heroicons/vue/24/outline";
 
 const route = useRoute();
 

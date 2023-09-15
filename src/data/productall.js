@@ -13,13 +13,13 @@ export default [
         alt: "Angled front view with bag zipped and handles upright.",
       },
       {
-        id: 2,
+        id: 1,
         name: "Angled view",
-        src: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+        src: "https://tailwindui.com/img/ecommerce-images/product-page-03-product-01.jpg",
         alt: "Angled front view with bag zipped and handles upright.",
       },
       {
-        id: 3,
+        id: 1,
         name: "Angled view",
         src: "https://tailwindui.com/img/ecommerce-images/product-page-03-product-01.jpg",
         alt: "Angled front view with bag zipped and handles upright.",
@@ -76,7 +76,7 @@ export default [
     `,
   },
   {
-    id: 3,
+    id: 2,
     name: "Test",
     price: "$140",
     href: "project",
@@ -114,7 +114,7 @@ export default [
     `,
   },
   {
-    id: 4,
+    id: 2,
     name: "Test",
     price: "$140",
     href: "project",
