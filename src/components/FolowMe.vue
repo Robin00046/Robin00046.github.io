@@ -39,7 +39,7 @@ const socialLinks = [
     id: 3,
     name: "LinkedIn",
     icon: "ph-linkedin-logo",
-    url: "https://www.linkedin.com/in/abdul-rofiq-almuqorobin-8ab512220",
+    url: "https://www.linkedin.com/in/abdul-rofiq-almuqorobin",
   },
   // {
   //   id: 4,
