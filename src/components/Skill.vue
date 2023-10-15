@@ -40,38 +40,38 @@
 </template>
 
 <script setup>
-import logo from '../assets/codeigniter.svg';
+import logo from "../assets/codeigniter.svg";
+import js from "../assets/js.png";
 const products = [
   {
-    name: 'PHP',
-    imageSrc: 'https://www.vectorlogo.zone/logos/php/php-ar21.svg',
-    imageAlt: 'PHP',
+    name: "PHP",
+    imageSrc: "https://www.vectorlogo.zone/logos/php/php-ar21.svg",
+    imageAlt: "PHP",
   },
   {
-    name: 'MYSQL',
-    imageSrc: 'https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg',
-    imageAlt: 'MYSQL',
+    name: "MYSQL",
+    imageSrc: "https://www.vectorlogo.zone/logos/mysql/mysql-ar21.svg",
+    imageAlt: "MYSQL",
   },
   {
-    name: 'Java Script',
-    imageSrc:
-      'https://www.vectorlogo.zone/logos/javascript/javascript-ar21.svg',
-    imageAlt: 'Java Script',
+    name: "Java Script",
+    imageSrc: js,
+    imageAlt: "Java Script",
   },
   {
-    name: 'Vue JS',
-    imageSrc: 'https://www.vectorlogo.zone/logos/vuejs/vuejs-ar21.svg',
-    imageAlt: 'Vue JS',
+    name: "Vue JS",
+    imageSrc: "https://www.vectorlogo.zone/logos/vuejs/vuejs-ar21.svg",
+    imageAlt: "Vue JS",
   },
   {
-    name: 'Laravel',
-    imageSrc: 'https://www.vectorlogo.zone/logos/laravel/laravel-ar21.svg',
-    imageAlt: 'Laravel Logo',
+    name: "Laravel",
+    imageSrc: "https://www.vectorlogo.zone/logos/laravel/laravel-ar21.svg",
+    imageAlt: "Laravel Logo",
   },
   {
-    name: 'CodeIgniter 3',
+    name: "CodeIgniter 3",
     imageSrc: logo,
-    imageAlt: 'CodeIgniter',
+    imageAlt: "CodeIgniter",
   },
 ];
 </script>

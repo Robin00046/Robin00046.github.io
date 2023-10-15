@@ -7,13 +7,13 @@
       aria-label="Global"
     >
       <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
+        <a href="/" class="-m-1.5 p-1.5">
           <span class="sr-only">Your Company</span>
-          <img
-            class="h-8 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=cyan&shade=600"
-            alt=""
-          />
+          <h1
+            class="text-lg font-semibold leading-6 text-cyan-100 p-2 rounded-lg"
+          >
+            Portofolio
+          </h1>
         </a>
       </div>
       <div class="flex lg:hidden">
